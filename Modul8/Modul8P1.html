@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Konversi Angka ke Huruf</title>
+</head>
+<body>
+
+  <section class="container">
+    <h2>Konversi Angka ke Huruf</h2>
+
+    <label for="angka">Masukkan Angka</label><br />
+    <input type="number" id="angka" /><br /><br />
+
+    <button id="submit-angka">Submit</button>
+
+    <div style="display: flex; align-items: center; gap: 5px; margin-top: 10px;">
+      <span>Hasil nilai :</span>
+      <p id="hasil"></p>
+    </div>
+  </section>
+
+  <script>
+    const btn = document.getElementById("submit-angka");
+    const inputNumber = document.getElementById("angka");
+    const conHasil = document.getElementById("hasil");
+
+    btn.addEventListener("click", () => {
+      const valueAngka = Number(inputNumber.value);
+
+      switch (true) {
+        case valueAngka >= 81 && valueAngka <= 100:
+          conHasil.textContent = "A";
+          break;
+
+        case valueAngka >= 71 && valueAngka <= 80:
+          conHasil.textContent = "AB";
+          break;
+
+        case valueAngka >= 66 && valueAngka <= 70:
+          conHasil.textContent = "B";
+          break;
+
+        case valueAngka >= 61 && valueAngka <= 65:
+          conHasil.textContent = "BC";
+          break;
+
+        case valueAngka >= 56 && valueAngka <= 60:
+          conHasil.textContent = "C";
+          break;
+
+        case valueAngka >= 41 && valueAngka <= 55:
+          conHasil.textContent = "D";
+          break;
+
+        case valueAngka >= 0 && valueAngka <= 40:
+          conHasil.textContent = "E";
+          break;
+
+        default:
+          conHasil.textContent = "Input tidak valid";
+      }
+    });
+  </script>
+
+</body>
+</html>

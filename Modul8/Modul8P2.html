@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kalkulator Sederhana</title>
+</head>
+<body>
+
+  <section class="container">
+    <h2>Kalkulator Sederhana</h2>
+
+    <input type="number" id="input1" placeholder="Input 1" />
+    <input type="number" id="input2" placeholder="Input 2" />
+
+    <p>Pilih operator</p>
+    <div>
+      <button id="tambah">Tambah</button>
+      <button id="kurang">Kurang</button>
+      <button id="kali">Kali</button>
+      <button id="bagi">Bagi</button>
+    </div>
+
+    <div style="margin-top: 10px;">
+      <span>Hasil: </span>
+      <p id="hasil-operator"></p>
+    </div>
+  </section>
+
+  <script>
+    const input1 = document.getElementById("input1");
+    const input2 = document.getElementById("input2");
+    const btnTambah = document.getElementById("tambah");
+    const btnBagi = document.getElementById("bagi");
+    const btnKurang = document.getElementById("kurang");
+    const btnKali = document.getElementById("kali");
+    const conHasil = document.getElementById("hasil-operator");
+
+    btnTambah.addEventListener("click", () => {
+      let value1 = Number(input1.value);
+      let value2 = Number(input2.value);
+      conHasil.textContent = value1 + value2;
+    });
+
+    btnKali.addEventListener("click", () => {
+      let value1 = Number(input1.value);
+      let value2 = Number(input2.value);
+      conHasil.textContent = value1 * value2;
+    });
+
+    btnBagi.addEventListener("click", () => {
+      let value1 = Number(input1.value);
+      let value2 = Number(input2.value);
+      conHasil.textContent = value1 / value2;
+    });
+
+    btnKurang.addEventListener("click", () => {
+      let value1 = Number(input1.value);
+      let value2 = Number(input2.value);
+      conHasil.textContent = value1 - value2;
+    });
+  </script>
+
+</body>
+</html>
